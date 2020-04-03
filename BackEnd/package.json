@@ -1,0 +1,31 @@
+{
+   "name": "BackEnd",
+   "version": "1.0.0",
+   "main": "index.js",
+   "license": "MIT",
+   "scripts": {
+      "dev": "nodemon src/server.js"
+   },
+   "dependencies": {
+      "cors": "^2.8.5",
+      "date-fns": "^2.11.1",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "sequelize": "^5.21.5",
+      "sequelize-cli": "^5.5.1",
+      "sqlite3": "^4.1.1",
+      "totalvoice-node": "^1.10.0",
+      "yup": "^0.28.3"
+   },
+   "devDependencies": {
+      "eslint": "^6.8.0",
+      "eslint-config-airbnb-base": "^14.1.0",
+      "eslint-config-prettier": "^6.10.1",
+      "eslint-plugin-import": "^2.20.2",
+      "eslint-plugin-import-helpers": "^1.0.2",
+      "eslint-plugin-prettier": "^3.1.2",
+      "nodemon": "^2.0.2",
+      "prettier": "^2.0.2",
+      "sucrase": "^3.13.0"
+   }
+}

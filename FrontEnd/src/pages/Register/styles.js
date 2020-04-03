@@ -8,38 +8,39 @@ export const Container = styled.div`
    border-radius: 10px;
    box-shadow: 0px 8px 20px -10px rgba(0, 0, 0, 0.75);
 
-   h1 {
-      margin-bottom: 10px;
+   h2 {
+      margin-bottom: 15px;
    }
 
    form {
       width: 100%;
-      max-width: 400px;
+      max-width: 300px;
       margin: auto;
       display: flex;
       flex-direction: column;
       align-content: center;
       justify-content: center;
 
-      input {
-         margin-bottom: 10px;
-         padding: 10px;
-         border: 0px;
-         border-bottom: 1px solid grey;
-         background: transparent;
-         transition: all 0.5s;
-      }
-
-      input:focus {
-         border-bottom: 1px solid blue;
-      }
-
       div {
          display: flex;
-         justify-content: space-between;
+         width: 100%;
+
+         svg {
+            position: absolute;
+            margin: 8px;
+            width: 20px;
+         }
 
          input {
-            width: 45%;
+            margin-bottom: 10px;
+            padding: 10px 20px 10px 40px;
+            border: 0px;
+            border-bottom: 1px solid grey;
+            background: transparent;
+            transition: all 0.5s;
+         }
+         input:focus {
+            border-bottom: 1px solid blue;
          }
       }
 
@@ -49,8 +50,19 @@ export const Container = styled.div`
          color: red;
       }
 
+      div:last-child {
+         display: flex;
+         width: 100%;
+         height: 100%;
+         padding: 10px 0 20px 0;
+         margin: auto;
+         justify-content: center;
+         align-content: center;
+      }
+
       button {
-         background: ${(props) => props.theme.colors.buttonColors};
+         background: ${(props) => props.theme.colors.backgSeg};
+         color: white;
          opacity: ${(props) => (props.loading ? '0.5' : '1')};
          margin-top: 30px;
          padding: 15px;
@@ -60,7 +72,7 @@ export const Container = styled.div`
       }
 
       button:hover {
-         background: ${darken(0.1, '#C2FFFF')};
+         background: ${darken(0.1, 'grey')};
       }
    }
 `;

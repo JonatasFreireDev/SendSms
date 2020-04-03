@@ -1,4 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+import { darken } from 'polished';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
    *{
@@ -8,12 +11,7 @@ export default createGlobalStyle`
       box-sizing: border-box;
    }
    body{
-      background: #9ed9ff;
-      background: -moz-linear-gradient(-45deg,  #9ed9ff 1%, #a3ebff 59%);
-      background: -webkit-linear-gradient(-45deg,  #9ed9ff 1%,#a3ebff 59%);
-      background: linear-gradient(135deg,  #9ed9ff 1%,#a3ebff 59%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ed9ff', endColorstr='#a3ebff',GradientType=1 );
-
+      background: ${(props) => props.theme.mainColors.primary};
       width: 100%;
       height: 100vh;
       display: flex;
@@ -45,4 +43,18 @@ export default createGlobalStyle`
          color: black;
       }
    }
+   button {
+         background: ${(props) => props.theme.colors.backgSeg};
+         color: white;
+         opacity: ${(props) => (props.loading ? '0.5' : '1')};
+         margin-top: 30px;
+         padding: 15px;
+         border: none;
+         border-radius: 10px;
+         transition: all 0.2s;
+      }
+
+      button:hover {
+         background: ${darken(0.1, 'grey')};
+      }
 `;
